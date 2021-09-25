@@ -23,4 +23,4 @@ const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
 ```
 Result:
 
-<img alt="screenshot" src="https://raw.githubusercontent.com/x000001x/NodeJS-Simple-Whatsapp-Message-Api/main/Ekran%20Al%C4%B1nt%C4%B1s%C4%B1.PNG?token=AVZCZWTLSM5BOTP26R2JWH3BJ3Y4K">
+<img alt="screenshot" src="https://raw.githubusercontent.com/x000001x/NodeJS-Simple-Whatsapp-Message-Api/main/pictures/screenshot_0.PNG?token=AVZCZWWVGSV53WSBGS3RUC3BJ4FCQ">
