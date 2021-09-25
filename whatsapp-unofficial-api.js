@@ -177,6 +177,7 @@ class whatsappUnofficialApi {
         await browser.close()
         console.log("Exited".magenta)
     }
+	//this function is beta
     async getfriendslist(range,page=global.page) {
          global.friends = []
         for (let i = 0; i < range; i++) {
