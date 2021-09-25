@@ -47,7 +47,7 @@ waexit // Exit with click exit button on web whatsapp
 
 ## Saving Session Using UserDataDir
 
-If you apply this method, you don't need to read qr code every time you send a message, first create Web Whatsapp logined UserDataDir:
+If you apply this method, you don't need to read qr code every time you send a message, first create a Web Whatsapp logined UserDataDir:
 
 ```javascript
 const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
