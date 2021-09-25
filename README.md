@@ -35,14 +35,12 @@ Result:
 This API has optional and required parameters:
 
 ```javascript
-await client.services((save = false), // UserDataDir Create
-                     (headless = true)); // Headless chrome
-await client.login((keep = false)); // Keep Signed In On Web Whatsapp       
-await client.send_text(
-    (user = "username or phone"), // User info
-    (message = "test message"), // Message Text
-    (range = 1) // Number of messages to be sent
-  );
-await client.Exit((delay = 0), // Wait before exit
-                 (waexit = true)); // Exit with click exit button on web whatsapp
+save // UserDataDir Create
+headdless // Headless chrome
+keep // Keep Signed In On Web Whatsapp       
+user // User info
+message // Message Text
+range // Number of messages to be sent
+delay // Wait before exit
+waexit // Exit with click exit button on web whatsapp
 ```
