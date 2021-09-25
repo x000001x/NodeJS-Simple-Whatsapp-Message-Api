@@ -1,1 +1,3 @@
-# NodeJS-Simple-Whatsapp-Message-Api
+Simple Whatsapp Message Api (BETA)
+
+This work with Puppeteer, you can send message and get your whatsapp contacts list (beta)...
