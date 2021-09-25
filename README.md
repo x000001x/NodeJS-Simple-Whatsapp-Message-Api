@@ -18,6 +18,7 @@ const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
     await client.services(false,true)
     await client.login(false)
     await client.send_text(user='username or phone',message='test message',range=1)
+    //Examples; Username:Ebeveyn A, Phone:+905555555555
     await client.Exit(0,true)
 }) ();
 ```
