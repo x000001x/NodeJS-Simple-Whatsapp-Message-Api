@@ -44,3 +44,30 @@ range // Number of messages to be sent
 delay // Wait before exit
 waexit // Exit with click exit button on web whatsapp
 ```
+
+## Saving Session Using UserDataDir
+
+If you apply this method, you don't need to read qr code every time you send a message, first create Web Whatsapp logined UserDataDir:
+
+```javascript
+const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
+
+(async () => {
+  const client = new whatsappUnofficialApi();
+  await client.services((save = true), (headless = true));
+  await client.login((keep = true));
+  await client.Exit((delay = 0), (waexit = false));
+})();
+```
+
+Now you can send message without read QrCode on every time:
+
+```javascript
+(async () => {
+  const client = new whatsappUnofficialApi();
+  await client.services((save = true), (headless = true));
+  await client.savedlogin();
+  await client.send_text("username or phone", "test message", 1);
+  await client.Exit((delay = 0), (waexit = false));
+})();
+```
