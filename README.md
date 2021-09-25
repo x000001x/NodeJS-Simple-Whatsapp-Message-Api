@@ -1,7 +1,7 @@
 # Simple Whatsapp Message Api (BETA)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-This API is working with using the Web Driver [Puppeteer](https://github.com/puppeteer/puppeteer). You can send message and get your contact list (beta) on Whatsapp using this api. Note; That this project is in Beta, More API functions will be added in the future.  
+This API is working with using the Web Driver [Puppeteer](https://github.com/puppeteer/puppeteer). You can send message and get your contact list on Whatsapp using this api. Note; That this project is in Beta, More API functions will be added in the future.  
 
 ## Install Requirements
 Before use the api you need to install the requirements:
