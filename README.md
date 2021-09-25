@@ -35,14 +35,14 @@ Result:
 This API has optional and required parameters:
 
 ```javascript
-save // UserDataDir Create
+save      // UserDataDir Create
 headdless // Headless chrome
-keep // Keep Signed In On Web Whatsapp       
-user // User info
-message // Message Text
-range // Number of messages to be sent
-delay // Wait before exit
-waexit // Exit with click exit button on web whatsapp
+keep      // Keep Signed In On Web Whatsapp       
+user      // User info
+message   // Message Text
+range     // Number of messages to be sent
+delay     // Wait before exit
+waexit    // Exit with click exit button on web whatsapp
 ```
 
 ## Saving Session Using UserDataDir
