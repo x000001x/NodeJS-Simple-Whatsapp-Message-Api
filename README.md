@@ -63,6 +63,8 @@ const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
 Now you can send message without read QrCode on every time:
 
 ```javascript
+const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
+
 (async () => {
   const client = new whatsappUnofficialApi();
   await client.services((save = true), (headless = true));
