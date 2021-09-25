@@ -14,14 +14,35 @@ npm install puppeteer jssoup qrcode-terminal colors
 const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
 
 (async () => {
-    const client = new whatsappUnofficialApi()
-    await client.services(false,true)
-    await client.login(false)
-    await client.send_text(user='username or phone',message='test message',range=1)
-    //Examples; Username:Ebeveyn A, Phone:+905555555555
-    await client.Exit(0,true)
-}) ();
+  const client = new whatsappUnofficialApi();
+  await client.services((save = false), (headless = true));
+  await client.login((keep = false));
+  await client.send_text(
+    (user = "username or phone"),
+    (message = "test message"),
+    (range = 1)
+  );
+  //Examples; Username:Ebeveyn A, Phone:+905555555555
+  await client.Exit((delay = 0), (waexit = true));
+})();
 ```
 Result:
 
 <img src="pictures/screenshot_0.PNG" height="400">
+
+## Parameters
+
+This API has optional and required parameters:
+
+```javascript
+await client.services((save = false), // UserDataDir Create
+                     (headless = true)); // Headless chrome
+await client.login((keep = false)); // Keep Signed In On Web Whatsapp       
+await client.send_text(
+    (user = "username or phone"), // User info
+    (message = "test message"), // Message Text
+    (range = 1) // Number of messages to be sent
+  );
+await client.Exit((delay = 0), // Wait before exit
+                 (waexit = true)); // Exit with click exit button on web whatsapp
+```
