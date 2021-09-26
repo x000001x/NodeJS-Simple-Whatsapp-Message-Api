@@ -8,34 +8,20 @@ class whatsappUnofficialApi {
     const args = [
       "--log-level=3",
       "--no-default-browser-check",
-      "--disable-infobars",
-      "--disable-web-security",
-      "--disable-site-isolation-trials",
-      "--no-experiments",
-      "--ignore-gpu-blacklist",
-      "--ignore-certificate-errors",
-      "--ignore-certificate-errors-spki-list",
       "--disable-gpu",
       "--disable-extensions",
       "--disable-default-apps",
-      "--enable-features=NetworkService",
-      "--disable-setuid-sandbox",
       "--no-sandbox",
     ];
     if (save === true) {
       global.browser = await puppeteer.launch({
         headless: headdless,
         userDataDir: "session",
-        handleSIGINT: false,
-        ignoreHTTPSErrors: true,
         args: args,
-        ignoreDefaultArgs: ["--enable-automation"],
       });
     } else if (save === false) {
       global.browser = await puppeteer.launch({
         headless: headdless,
-        handleSIGINT: false,
-        ignoreHTTPSErrors: true,
         args: args,
         ignoreDefaultArgs: ["--enable-automation"],
       });
@@ -187,7 +173,7 @@ class whatsappUnofficialApi {
     await browser.close();
     console.log("Exited".magenta);
   }
-	// this function is the beta
+  // this function is the beta
   async getfriendslist(range, page = global.page) {
     global.friends = [];
     for (let i = 0; i < range; i++) {
