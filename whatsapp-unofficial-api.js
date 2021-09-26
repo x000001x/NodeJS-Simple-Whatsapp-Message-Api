@@ -6,24 +6,42 @@ const colors = require("colors");
 class whatsappUnofficialApi {
   async services(save, headdless) {
     const args = [
-      "--log-level=3",
-      "--no-default-browser-check",
-      "--disable-gpu",
-      "--disable-extensions",
-      "--disable-default-apps",
-      "--no-sandbox",
+      '--disable-dev-shm-usage',
+        '--enable-sync', '--enable-background-networking', '--no-sandbox', '--disable-setuid-sandbox',
+        '--disable-gpu', '--renderer', '--no-service-autorun', '--no-experiments',
+        '--no-default-browser-check', '--disable-webgl', '--disable-threaded-animation',
+        '--disable-threaded-scrolling', '--disable-in-process-stack-traces', '--disable-histogram-customizer',
+        '--disable-gl-extensions', '--disable-extensions', '--disable-composited-antialiasing',
+        '--disable-canvas-aa', '--disable-3d-apis', '--disable-accelerated-2d-canvas',
+        '--disable-accelerated-jpeg-decoding', '--disable-accelerated-mjpeg-decode', '--disable-app-list-dismiss-on-blur',
+        '--disable-accelerated-video-decode', '--mute-audio',
+        '--log-level=3',
+        '--disable-infobars',
+        '--disable-web-security',
+        '--disable-site-isolation-trials',
+        '--ignore-gpu-blacklist',
+        '--ignore-certificate-errors',
+        '--ignore-certificate-errors-spki-list',
+        '--disable-default-apps',
+        '--enable-features=NetworkService',
+        '--no-first-run',
+        '--no-zygote',
+        '--unlimited-storage'
     ];
     if (save === true) {
       global.browser = await puppeteer.launch({
         headless: headdless,
         userDataDir: "session",
         args: args,
+        ignoreHTTPSErrors: true,
+        defaultViewport: null,
       });
     } else if (save === false) {
       global.browser = await puppeteer.launch({
         headless: headdless,
         args: args,
-        ignoreDefaultArgs: ["--enable-automation"],
+        ignoreHTTPSErrors: true,
+        defaultViewport: null,
       });
     }
     global.page = await browser.newPage();
