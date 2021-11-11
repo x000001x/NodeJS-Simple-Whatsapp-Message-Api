@@ -73,5 +73,3 @@ const { whatsappUnofficialApi } = require("./whatsapp-unofficial-api");
   await client.Exit((delay = 0), (waexit = false));
 })();
 ```
-
-Erdem tarafindan yaoildi
